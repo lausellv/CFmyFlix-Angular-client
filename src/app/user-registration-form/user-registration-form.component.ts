@@ -1,6 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
+//API call
 import { UserRegistrationService } from '../fetch-api-data.service';
+//closes dialog
 import { MatDialogRef } from '@angular/material/dialog';
+//display notification to client
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
@@ -27,11 +30,13 @@ export class UserRegistrationFormComponent implements OnInit {
       (result) => {
         this.isLoading = false;
         this.dialogRef.close();
+        console.log (result)
         this.snackBar.open('Registration complete, please login', 'Ok', {
           duration: 2000,
         });
       },
       (result) => {
+        console.log(result)
         this.isLoading = false;
         this.snackBar.open(result, 'Ok', {
           duration: 2000,

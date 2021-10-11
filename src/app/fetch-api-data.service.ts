@@ -12,32 +12,35 @@ import { map } from 'rxjs/operators';
 const apiUrl = 'https://cf-my-movie-app.herokuapp.com/';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class UserRegistrationService {
-  // HttpClient added as a dependency of the entire class
-  constructor(private http: HttpClient) {}
-  // API call for the user registration endpoint
+  constructor(private http: HttpClient) {
+  }
   public userRegistration(userDetails: any): Observable<any> {
     console.log(userDetails);
-    return this.http
-      .post(apiUrl + 'users', userDetails)
-      .pipe(catchError(this.handleError));
+    return this.http.post(apiUrl + 'users', userDetails).pipe(
+      catchError(this.handleError)
+    );
   }
-  // Error handler
   private handleError(error: HttpErrorResponse): any {
     if (error.error instanceof ErrorEvent) {
       console.error('Some error occurred:', error.error.message);
     } else {
       console.error(
-        `Error Status code ${error.status}, ` + `Error body is: ${error.error}`
-      );
+        `Error Status code ${error.status}, ` +
+        `Error body is: ${error.error}`);
     }
-    return throwError('Something bad happened; please try again later.');
+    return throwError(
+      'Something bad happened; please try again later.');
   }
 }
 
+
 // User login (Endpoint: 'login').
+@Injectable({
+  providedIn: 'root'
+})
 export class UserLoginService {
   constructor(private http: HttpClient) {}
 
@@ -61,6 +64,9 @@ export class UserLoginService {
 }
 
 //Get all movies
+@Injectable({
+  providedIn: 'root'
+})
 export class GetAllMoviesService {
   constructor(private http: HttpClient) {}
 
@@ -92,6 +98,9 @@ export class GetAllMoviesService {
   }
 }
 // Get one movie by title.
+@Injectable({
+  providedIn: 'root'
+})
 export class GetSingleMovieService {
   constructor(private http: HttpClient) {}
 
@@ -123,6 +132,9 @@ export class GetSingleMovieService {
   }
 }
 // Get director
+@Injectable({
+  providedIn: 'root'
+})
 export class GetDirectorService {
   constructor(private http: HttpClient) {}
 
@@ -154,6 +166,9 @@ export class GetDirectorService {
   }
 }
 // Get genre
+@Injectable({
+  providedIn: 'root'
+})
 export class GetGenreService {
   constructor(private http: HttpClient) {}
 
@@ -185,6 +200,9 @@ export class GetGenreService {
   }
 }
 //get user
+@Injectable({
+  providedIn: 'root'
+})
 export class GetUserService {
   // HttpClient added as a dependency of the entire class
   constructor(private http: HttpClient) {}
@@ -250,6 +268,9 @@ export class AddFavoriteMovieService {
 }
 
 // Delete a favorite movie
+@Injectable({
+  providedIn: 'root'
+})
 export class RemoveFavoriteMovieService {
   constructor(private http: HttpClient) {}
 
@@ -282,6 +303,9 @@ export class RemoveFavoriteMovieService {
   }
 }
 // Edit user
+@Injectable({
+  providedIn: 'root'
+})
 export class EditUserService {
   constructor(private http: HttpClient) {}
 
@@ -315,6 +339,9 @@ export class EditUserService {
 }
 
 // Delete user
+@Injectable({
+  providedIn: 'root'
+})
 export class DeleteUserService {
   constructor(private http: HttpClient) {}
 
