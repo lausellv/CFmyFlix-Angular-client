@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
-import { catchError } from 'rxjs/internal/operators';
 import {
   HttpClient,
   HttpHeaders,
   HttpErrorResponse,
 } from '@angular/common/http';
+
 import { Observable, throwError } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { catchError } from 'rxjs/internal/operators';
+
+
 
 // API URL whichw will provide data
 const apiUrl = 'https://cf-my-movie-app.herokuapp.com/';
@@ -14,9 +17,11 @@ const apiUrl = 'https://cf-my-movie-app.herokuapp.com/';
 @Injectable({
   providedIn: 'root'
 })
-export class UserRegistrationService {
+export class FetchDataApiService {
+
   constructor(private http: HttpClient) {
   }
+
   public userRegistration(userDetails: any): Observable<any> {
     console.log(userDetails);
     return this.http.post(apiUrl + 'users', userDetails).pipe(
@@ -38,9 +43,7 @@ export class UserRegistrationService {
 
 
 // User login (Endpoint: 'login').
-@Injectable({
-  providedIn: 'root'
-})
+
 export class UserLoginService {
   constructor(private http: HttpClient) {}
 
@@ -64,9 +67,7 @@ export class UserLoginService {
 }
 
 //Get all movies
-@Injectable({
-  providedIn: 'root'
-})
+
 export class GetAllMoviesService {
   constructor(private http: HttpClient) {}
 
@@ -98,9 +99,7 @@ export class GetAllMoviesService {
   }
 }
 // Get one movie by title.
-@Injectable({
-  providedIn: 'root'
-})
+
 export class GetSingleMovieService {
   constructor(private http: HttpClient) {}
 
@@ -132,9 +131,7 @@ export class GetSingleMovieService {
   }
 }
 // Get director
-@Injectable({
-  providedIn: 'root'
-})
+
 export class GetDirectorService {
   constructor(private http: HttpClient) {}
 
@@ -166,9 +163,7 @@ export class GetDirectorService {
   }
 }
 // Get genre
-@Injectable({
-  providedIn: 'root'
-})
+
 export class GetGenreService {
   constructor(private http: HttpClient) {}
 
@@ -200,9 +195,7 @@ export class GetGenreService {
   }
 }
 //get user
-@Injectable({
-  providedIn: 'root'
-})
+
 export class GetUserService {
   // HttpClient added as a dependency of the entire class
   constructor(private http: HttpClient) {}
@@ -268,9 +261,7 @@ export class AddFavoriteMovieService {
 }
 
 // Delete a favorite movie
-@Injectable({
-  providedIn: 'root'
-})
+
 export class RemoveFavoriteMovieService {
   constructor(private http: HttpClient) {}
 
@@ -303,9 +294,7 @@ export class RemoveFavoriteMovieService {
   }
 }
 // Edit user
-@Injectable({
-  providedIn: 'root'
-})
+
 export class EditUserService {
   constructor(private http: HttpClient) {}
 
@@ -339,9 +328,7 @@ export class EditUserService {
 }
 
 // Delete user
-@Injectable({
-  providedIn: 'root'
-})
+
 export class DeleteUserService {
   constructor(private http: HttpClient) {}
 
