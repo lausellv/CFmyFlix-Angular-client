@@ -18,7 +18,7 @@ const apiUrl = 'https://cf-my-movie-app.herokuapp.com/';
 export class FetchApiDataService {
   constructor(private http: HttpClient) {}
 
-  userRegistration(userDetails: any): Observable<any> {
+  public userRegistration(userDetails: any): Observable<any> {
     console.log(userDetails);
     return this.http
       .post(apiUrl + 'users', userDetails)
