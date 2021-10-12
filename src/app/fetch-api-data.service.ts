@@ -17,7 +17,7 @@ const apiUrl = 'https://cf-my-movie-app.herokuapp.com/';
 @Injectable({
   providedIn: 'root'
 })
-export class FetchDataApiService {
+export class FetchApiDataService {
 
   constructor(private http: HttpClient) {
   }
