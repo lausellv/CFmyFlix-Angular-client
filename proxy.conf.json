@@ -1,0 +1,11 @@
+{
+  "/api/": {
+    "target": "https://cf-my-movie-app.herokuapp.com/*",
+    "secure": false,
+    "loglevel":"debug",
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": "http://localhost:4200/api"
+    }
+  }
+}

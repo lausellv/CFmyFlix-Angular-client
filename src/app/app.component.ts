@@ -7,10 +7,12 @@ import { UserLoginFormComponent } from './user-login-form/user-login-form.compon
 
 // Materials
 import { MatDialog } from '@angular/material/dialog';
+import { FetchApiDataService } from './fetch-api-data.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  providers: [FetchApiDataService]
 })
 export class AppComponent {
   title = 'myFlix-Angular-client';
