@@ -1,4 +1,4 @@
-# myFlix
+# CFmyFlix
 
 # Purpose
 
