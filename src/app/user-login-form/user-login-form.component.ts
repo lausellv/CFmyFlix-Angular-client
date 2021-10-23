@@ -24,9 +24,15 @@ export class UserLoginFormComponent implements OnInit {
 
   ngOnInit(): void { }
 
+    /**
+   * Send user data to server-side validation and login
+   */
   loginUser(): void {
     this.isLoading = true;
-    this.fetchApiData.userLogin(this.userData).subscribe((response) => {
+    this.fetchApiData.userLogin(this.userData).subscribe(
+      //login successful
+      (response) => {
+        //store user and token in LS
       this.isLoading = true;
       this.dialogRef.close();
       localStorage.setItem('user', response.user.Username);
@@ -35,11 +41,13 @@ export class UserLoginFormComponent implements OnInit {
         duration: 2000
       });
       this.router.navigate(['movies']);
-    }, (response) => {
+    },
+    //unsuccesful login attempt
+    (response) => {
       this.isLoading = true;
       console.log(response);
       this.snackBar.open(response, 'OK', {
-        duration: 2000
+        duration: 3000
       });
     });
   }

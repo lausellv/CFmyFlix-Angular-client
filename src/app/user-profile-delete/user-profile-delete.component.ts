@@ -18,7 +18,9 @@ export class UserProfileDeleteComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  /**
+   * Delete user profile
+   */
   removeUserAccount(): void {
     this.fetchApiData.deleteUser().subscribe(
       (resp: any) => {

@@ -1,0 +1,72 @@
+<!DOCTYPE html><html class="default no-js"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>my-flix-angular-client</title><meta name="description" content="Documentation for my-flix-angular-client"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><script>document.body.classList.add(localStorage.getItem(&quot;tsd-theme&quot;) || &quot;os&quot;)</script><header><div class="tsd-page-toolbar"><div class="container"><div class="table-wrap"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget search no-caption">Search</label><input type="text" id="tsd-search-field"/></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">my-flix-angular-client</a></div><div class="table-cell" id="tsd-widgets"><div id="tsd-filter"><a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a><div class="tsd-filter-group"><div class="tsd-select" id="tsd-filter-visibility"><span class="tsd-select-label">All</span><ul class="tsd-select-list"><li data-value="public">Public</li><li data-value="protected">Public/Protected</li><li data-value="private" class="selected">All</li></ul></div> <input type="checkbox" id="tsd-filter-inherited" checked/><label class="tsd-widget" for="tsd-filter-inherited">Inherited</label><input type="checkbox" id="tsd-filter-externals" checked/><label class="tsd-widget" for="tsd-filter-externals">Externals</label></div></div><a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a></div></div></div></div><div class="tsd-page-title"><div class="container"><h1> my-flix-angular-client</h1></div></div></header><div class="container container-main"><div class="row"><div class="col-8 col-content"><div class="tsd-panel tsd-typography">
+<a href="#cfmyflix" id="cfmyflix" style="color: inherit; text-decoration: none;">
+  <h1>CFmyFlix</h1>
+</a>
+
+<a href="#purpose" id="purpose" style="color: inherit; text-decoration: none;">
+  <h1>Purpose</h1>
+</a>
+<p>Welcome to <strong>myFlix</strong>! My objective was to build the client side using Angular to display the data stored in my MongoDB database. The client side and server side communicates via a RESTful <a href="https://github.com/lausellv/CFmyFlix-client.git">API</a>. The project utilizes a single-page application with state routing to navigate between views and share URLs.</p>
+
+<a href="#what-will-it-do" id="what-will-it-do" style="color: inherit; text-decoration: none;">
+  <h1>What will it do?</h1>
+</a>
+<p>The web application will provide users with access to information about different movies, directors, and genres. Users will be able to sign up, update their personal information, and create a list of their favorite movies.</p>
+
+<a href="#features" id="features" style="color: inherit; text-decoration: none;">
+  <h1>Features</h1>
+</a>
+<ul>
+<li>Allows users to see a list of all movies in the database</li>
+<li>Allows users to get detailed information about a single movie by movie title</li>
+<li>Allows users to get detailed information about a genre by genre name</li>
+<li>Allows users to get detailed information about a director by name</li>
+<li>Allows new users to create an user account</li>
+<li>Allows existing users to update their user info or to delete their account</li>
+<li>Allows existing users to add or remove movies to/from their list of favorites</li>
+</ul>
+
+<a href="#stack-dependencies-environment-hosting" id="stack-dependencies-environment-hosting" style="color: inherit; text-decoration: none;">
+  <h1>Stack, Dependencies, Environment, Hosting</h1>
+</a>
+
+<a href="#stack" id="stack" style="color: inherit; text-decoration: none;">
+  <h3>Stack</h3>
+</a>
+<ol>
+<li>Angular</li>
+<li><strong>Note</strong> - The complete frontend and backend project utilizes the MEAN stack</li>
+</ol>
+
+<a href="#dependencies" id="dependencies" style="color: inherit; text-decoration: none;">
+  <h3>Dependencies</h3>
+</a>
+<pre><code><span class="hl-0">&quot;@angular/animations&quot;</span><span class="hl-1">: </span><span class="hl-0">&quot;~12.2.0&quot;</span><span class="hl-1">,</span><br/><span class="hl-0">&quot;@angular/cdk&quot;</span><span class="hl-1">: </span><span class="hl-0">&quot;^12.2.9&quot;</span><span class="hl-1">,</span><br/><span class="hl-0">&quot;@angular/common&quot;</span><span class="hl-1">: </span><span class="hl-0">&quot;~12.2.0&quot;</span><span class="hl-1">,</span><br/><span class="hl-0">&quot;@angular/compiler&quot;</span><span class="hl-1">: </span><span class="hl-0">&quot;~12.2.0&quot;</span><span class="hl-1">,</span><br/><span class="hl-0">&quot;@angular/core&quot;</span><span class="hl-1">: </span><span class="hl-0">&quot;~12.2.0&quot;</span><span class="hl-1">,</span><br/><span class="hl-0">&quot;@angular/forms&quot;</span><span class="hl-1">: </span><span class="hl-0">&quot;~12.2.0&quot;</span><span class="hl-1">,</span><br/><span class="hl-0">&quot;@angular/material&quot;</span><span class="hl-1">: </span><span class="hl-0">&quot;^12.2.9&quot;</span><span class="hl-1">,</span><br/><span class="hl-0">&quot;@angular/platform-browser&quot;</span><span class="hl-1">: </span><span class="hl-0">&quot;~12.2.0&quot;</span><span class="hl-1">,</span><br/><span class="hl-0">&quot;@angular/platform-browser-dynamic&quot;</span><span class="hl-1">: </span><span class="hl-0">&quot;~12.2.0&quot;</span><span class="hl-1">,</span><br/><span class="hl-0">&quot;@angular/router&quot;</span><span class="hl-1">: </span><span class="hl-0">&quot;~12.2.0&quot;</span><span class="hl-1">,</span><br/><span class="hl-0">&quot;rxjs&quot;</span><span class="hl-1">: </span><span class="hl-0">&quot;~6.6.0&quot;</span><span class="hl-1">,</span><br/><span class="hl-0">&quot;tslib&quot;</span><span class="hl-1">: </span><span class="hl-0">&quot;^2.3.0&quot;</span><span class="hl-1">,</span><br/><span class="hl-0">&quot;zone.js&quot;</span><span class="hl-1">: </span><span class="hl-0">&quot;~0.11.4&quot;</span>
+</code></pre>
+
+<a href="#devdependencies" id="devdependencies" style="color: inherit; text-decoration: none;">
+  <h3>devDependencies</h3>
+</a>
+<pre><code><span class="hl-0">&quot;@angular-devkit/build-angular&quot;</span><span class="hl-1">: </span><span class="hl-0">&quot;~12.2.7&quot;</span><span class="hl-1">,</span><br/><span class="hl-0">&quot;@angular/cli&quot;</span><span class="hl-1">: </span><span class="hl-0">&quot;~12.2.7&quot;</span><span class="hl-1">,</span><br/><span class="hl-0">&quot;@angular/compiler-cli&quot;</span><span class="hl-1">: </span><span class="hl-0">&quot;~12.2.0&quot;</span><span class="hl-1">,</span><br/><span class="hl-0">&quot;@types/jasmine&quot;</span><span class="hl-1">: </span><span class="hl-0">&quot;~3.8.0&quot;</span><span class="hl-1">,</span><br/><span class="hl-0">&quot;@types/node&quot;</span><span class="hl-1">: </span><span class="hl-0">&quot;^12.11.1&quot;</span><span class="hl-1">,</span><br/><span class="hl-0">&quot;jasmine-core&quot;</span><span class="hl-1">: </span><span class="hl-0">&quot;~3.8.0&quot;</span><span class="hl-1">,</span><br/><span class="hl-0">&quot;karma&quot;</span><span class="hl-1">: </span><span class="hl-0">&quot;~6.3.0&quot;</span><span class="hl-1">,</span><br/><span class="hl-0">&quot;karma-chrome-launcher&quot;</span><span class="hl-1">: </span><span class="hl-0">&quot;~3.1.0&quot;</span><span class="hl-1">,</span><br/><span class="hl-0">&quot;karma-coverage&quot;</span><span class="hl-1">: </span><span class="hl-0">&quot;~2.0.3&quot;</span><span class="hl-1">,</span><br/><span class="hl-0">&quot;karma-jasmine&quot;</span><span class="hl-1">: </span><span class="hl-0">&quot;~4.0.0&quot;</span><span class="hl-1">,</span><br/><span class="hl-0">&quot;karma-jasmine-html-reporter&quot;</span><span class="hl-1">: </span><span class="hl-0">&quot;~1.7.0&quot;</span><span class="hl-1">,</span><br/><span class="hl-0">&quot;typescript&quot;</span><span class="hl-1">: </span><span class="hl-0">&quot;~4.3.5&quot;</span>
+</code></pre>
+
+<a href="#environment" id="environment" style="color: inherit; text-decoration: none;">
+  <h3>Environment</h3>
+</a>
+<ol>
+<li><strong>Visual Studio Code</strong>  v1.61.1</li>
+<li>npm v7.24.1</li>
+</ol>
+
+<a href="#development-server" id="development-server" style="color: inherit; text-decoration: none;">
+  <h3>Development server</h3>
+</a>
+<p>Run the below command for a dev server. Navigate to <code>http://localhost:4200/</code>. The app will automatically reload if you change any of the source files.</p>
+<pre><code><span class="hl-2">ng</span><span class="hl-1"> </span><span class="hl-2">serve</span>
+</code></pre>
+
+<a href="#project-status" id="project-status" style="color: inherit; text-decoration: none;">
+  <h1>Project Status</h1>
+</a>
+<p>Complete</p>
+</div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Modules</a></li><li class=" tsd-kind-module"><a href="modules/app_app_routing_module.html">app/app-<wbr/>routing.module</a></li><li class=" tsd-kind-module"><a href="modules/app_app_component.html">app/app.component</a></li><li class=" tsd-kind-module"><a href="modules/app_app_module.html">app/app.module</a></li><li class=" tsd-kind-module"><a href="modules/app_fetch_api_data_service.html">app/fetch-<wbr/>api-<wbr/>data.service</a></li><li class=" tsd-kind-module"><a href="modules/app_movie_card_movie_card_component.html">app/movie-<wbr/>card/movie-<wbr/>card.component</a></li><li class=" tsd-kind-module"><a href="modules/app_movie_director_movie_director_component.html">app/movie-<wbr/>director/movie-<wbr/>director.component</a></li><li class=" tsd-kind-module"><a href="modules/app_movie_genre_movie_genre_component.html">app/movie-<wbr/>genre/movie-<wbr/>genre.component</a></li><li class=" tsd-kind-module"><a href="modules/app_movie_synopsis_movie_synopsis_component.html">app/movie-<wbr/>synopsis/movie-<wbr/>synopsis.component</a></li><li class=" tsd-kind-module"><a href="modules/app_nav_bar_nav_bar_component.html">app/nav-<wbr/>bar/nav-<wbr/>bar.component</a></li><li class=" tsd-kind-module"><a href="modules/app_user_login_form_user_login_form_component.html">app/user-<wbr/>login-<wbr/>form/user-<wbr/>login-<wbr/>form.component</a></li><li class=" tsd-kind-module"><a href="modules/app_user_profile_delete_user_profile_delete_component.html">app/user-<wbr/>profile-<wbr/>delete/user-<wbr/>profile-<wbr/>delete.component</a></li><li class=" tsd-kind-module"><a href="modules/app_user_profile_update_user_profile_update_component.html">app/user-<wbr/>profile-<wbr/>update/user-<wbr/>profile-<wbr/>update.component</a></li><li class=" tsd-kind-module"><a href="modules/app_user_profile_user_profile_component.html">app/user-<wbr/>profile/user-<wbr/>profile.component</a></li><li class=" tsd-kind-module"><a href="modules/app_user_registration_form_user_registration_form_component.html">app/user-<wbr/>registration-<wbr/>form/user-<wbr/>registration-<wbr/>form.component</a></li><li class=" tsd-kind-module"><a href="modules/app_welcome_page_welcome_page_component.html">app/welcome-<wbr/>page/welcome-<wbr/>page.component</a></li><li class=" tsd-kind-module"><a href="modules/environments_environment.html">environments/environment</a></li><li class=" tsd-kind-module"><a href="modules/environments_environment_prod.html">environments/environment.prod</a></li></ul></nav></div></div></div><footer class="with-border-bottom"><div class="container"><h2>Legend</h2><div class="tsd-legend-group"><ul class="tsd-legend"><li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li></ul><ul class="tsd-legend"><li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li></ul></div><h2>Settings</h2><p>Theme <select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></p></div></footer><div class="container tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div><script src="assets/main.js"></script></body></html>

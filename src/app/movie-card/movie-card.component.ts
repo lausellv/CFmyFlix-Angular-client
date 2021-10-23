@@ -23,6 +23,10 @@ export class MovieCardComponent implements OnInit {
     public snackBar: MatSnackBar
   ) {}
 
+    /**
+   * Fetch all movies from DB
+   * @returns All movies stored in the database
+   */
   getMovies(): void {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
       this.movies = resp;
@@ -30,6 +34,10 @@ export class MovieCardComponent implements OnInit {
     });
   }
 
+    /**
+   * Add or remove movies from the Favorites list
+   * @param movieId
+   */
   editFavoriteMovies(movieId: string): any {
     if (this.isFavorite(movieId)) {
       this.fetchApiData.deleteFavoriteMovie(movieId).subscribe((resp: any) => {
@@ -55,7 +63,11 @@ export class MovieCardComponent implements OnInit {
   ngOnInit(): void {
     this.getMovies();
   }
-
+  /**
+   * Open dialog to show movie genre through MovieGenreComponent
+   * @param name
+   * @param description
+   */
   getGenre(name: string, description: string): void {
     this.dialog.open(MovieGenreComponent, {
       data: {
@@ -65,6 +77,12 @@ export class MovieCardComponent implements OnInit {
     });
   }
 
+  /**
+   * Open dialog to show movie director through MovieDirectorComponent
+   * @param name
+   * @param bio
+   * @param birth
+   */
   getDirector(name: string,
     bio: string,
     birth: string): void {
@@ -77,11 +95,21 @@ export class MovieCardComponent implements OnInit {
     });
   }
 
+    /**
+   * Open dialog to show movie description through MovieDescriptionComponent
+   * @param description
+   */
+
   getDescription(description: string): void {
     this.dialog.open(MovieSynopsisComponent, {
       data: { Description: description },
     });
   }
+
+   /**
+   * Check for favorite movies
+   * @param movieID
+   */
 
   isFavorite(movieID: string): boolean {
     return this.favoriteMovies.includes(movieID);
